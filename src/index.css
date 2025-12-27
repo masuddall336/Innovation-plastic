@@ -1,0 +1,7 @@
+@import "tailwindcss";
+body {
+  font-family: Gothic, Arial Narrow, Arial, sans-serif;
+}
+* {
+  scroll-behavior: smooth;
+}

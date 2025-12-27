@@ -1,0 +1,351 @@
+/* =========================
+   RESET
+========================= */
+
+
+/* =========================
+   MAIN CONTAINER (FIXED)
+========================= */
+.footer-container {
+    width: 100%;
+    min-height: 100%;      
+    overflow: visible;
+    position: relative;
+}
+
+.footer-bg {
+    width: 100%;
+    height:100%;
+    background: linear-gradient(135deg, #0c2d48 0%, #145da0 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+/* =========================
+   FACTORY SHAPES
+========================= */
+.footer-factory-shape {
+    position: absolute;
+    background: rgba(255, 255, 255, 0.1);
+    z-index: 1;
+}
+
+.footer-shape-1 {
+    width: 80%;
+    height: 30px;
+    bottom: 120px;
+    left: 10%;
+}
+
+.footer-shape-2 {
+    width: 60%;
+    height: 80px;
+    bottom: 150px;
+    left: 20%;
+}
+
+.footer-shape-3 {
+    width: 40%;
+    height: 120px;
+    bottom: 230px;
+    left: 30%;
+}
+
+/* =========================
+   CONVEYOR BELTS
+========================= */
+.footer-conveyor-line {
+    position: absolute;
+    height: 8px;
+    background: rgba(255, 255, 255, 0.08);
+    z-index: 1;
+}
+
+.footer-line-1 {
+    width: 85%;
+    bottom: 180px;
+    left: 7.5%;
+}
+
+.footer-line-2 {
+    width: 70%;
+    bottom: 200px;
+    left: 15%;
+}
+
+/* =========================
+   GEARS
+========================= */
+.footer-gear {
+    position: absolute;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.05);
+    border: 2px dashed rgba(255, 255, 255, 0.1);
+    z-index: 1;
+}
+
+.footer-gear-1 {
+    width: 60px;
+    height: 60px;
+    top: 40px;
+    left: 20%;
+}
+
+.footer-gear-2 {
+    width: 40px;
+    height: 40px;
+    top: 60px;
+    left: 30%;
+}
+
+.footer-gear-3 {
+    width: 70px;
+    height: 70px;
+    top: 30px;
+    right: 25%;
+}
+
+/* =========================
+   PLASTIC BOTTLES
+========================= */
+.footer-plastic-bottle {
+    position: absolute;
+    background: rgba(255, 255, 255, 0.15);
+    z-index: 1;
+}
+
+.footer-bottle-1 {
+    width: 40px;
+    height: 80px;
+    bottom: 50px;
+    left: 15%;
+}
+
+.footer-bottle-2 {
+    width: 35px;
+    height: 70px;
+    bottom: 60px;
+    left: 25%;
+}
+
+.footer-bottle-3 {
+    width: 45px;
+    height: 90px;
+    bottom: 40px;
+    left: 35%;
+}
+
+.footer-bottle-4 {
+    width: 30px;
+    height: 60px;
+    bottom: 70px;
+    left: 45%;
+}
+
+.footer-bottle-5 {
+    width: 40px;
+    height: 80px;
+    bottom: 50px;
+    left: 55%;
+}
+
+.footer-bottle-6 {
+    width: 35px;
+    height: 70px;
+    bottom: 60px;
+    left: 65%;
+}
+
+.footer-bottle-7 {
+    width: 45px;
+    height: 90px;
+    bottom: 40px;
+    left: 75%;
+}
+
+/* =========================
+   FOOTER CONTENT (FIXED)
+========================= */
+.footer-content {
+    position: relative;               /* FIX: was absolute */
+    background: rgba(17, 38, 59, 0.25);
+    color: #fff;
+    padding: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;           /* FIX */
+    z-index: 2;
+    padding-bottom: 60px;
+}
+
+/* =========================
+   COLUMNS
+========================= */
+.footer-column {
+    flex: 1;
+    padding: 0 20px;
+}
+
+.footer-column h3 {
+    color: #4dabf7;
+    margin-bottom: 14px;
+    font-size: 1.05rem;
+    letter-spacing: 0.5px;
+    font-weight: 900;
+}
+
+/* =========================
+   LOGO
+========================= */
+.footer-logo {
+    max-width: 100%;
+}
+
+/* =========================
+   MENU & SUBMENU
+========================= */
+.footer-menu {
+    list-style: none;
+}
+
+.footer-menu > li {
+    margin-bottom: 12px;
+}
+
+.footer-menu-title {
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.95rem;
+    transition: color 0.3s ease;
+}
+
+.footer-submenu {
+    list-style: none;
+    padding-left: 16px;
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transform: translateY(-10px);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.footer-submenu.open {
+    max-height: 500px;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.footer-submenu li {
+    margin-bottom: 6px;
+}
+
+.footer-submenu li a {
+    font-size: 0.85rem;
+    color: #b0c4d9;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.footer-submenu li a:hover {
+    color: #4dabf7;
+    padding-left: 4px;
+}
+
+.footer-li-arrow {
+    width: 8px;
+    height: 8px;
+    border-right: 2px solid #b0c4d9;
+    border-bottom: 2px solid #b0c4d9;
+    transform: rotate(315deg);
+    transition: transform 0.4s ease;
+}
+
+.footer-li-arrow.active {
+    transform: rotate(405deg);
+}
+
+/* =========================
+   CONTACT INFO
+========================= */
+.footer-column p {
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-bottom: 6px;
+}
+
+.footer-company-name {
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+/* =========================
+   COPYRIGHT
+========================= */
+.footer-copyright {
+    width: 100%;
+    text-align: center;
+    padding: 12px;
+    background: rgba(37, 94, 151, 0.85);
+    font-size: 0.85rem;
+    color: #fff;
+}
+
+/* =========================
+   ANIMATIONS
+========================= */
+@keyframes footer-floatBottle {
+    from { transform: translateY(0); }
+    to { transform: translateY(-10px); }
+}
+
+@keyframes footer-rotateGear {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media (max-width: 768px) {
+    .footer-container {
+        min-height: auto;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        gap: 30px;
+        padding: 30px 20px 100px;
+        text-align: center;
+    }
+
+    .footer-column {
+        padding: 0;
+    }
+
+    .footer-logo {
+        max-width: 100%;
+        margin: 0 auto;
+    }
+}
+
+/* =========================
+   DESKTOP HOVER SUBMENU
+========================= */
+@media (min-width: 769px) {
+    .footer-menu > li:hover .footer-submenu {
+        max-height: 500px;
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    .footer-menu > li:hover .footer-li-arrow {
+        transform: rotate(405deg);
+    }
+
+    .footer-logo {
+        max-width: 200px;
+        margin: 0 auto;
+    }
+}

@@ -1,0 +1,301 @@
+/* ========================= */
+/* CARD BASE */
+/* ========================= */
+.pack-card {
+  width: 100%;
+  border-radius: 16px;
+  overflow: hidden;
+  /* box-shadow: 0 18px 45px rgba(0, 0, 0, 0.18); */
+}
+
+/* ========================= */
+/* IMAGE CONTAINER */
+/* ========================= */
+.card-image {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  /* background: radial-gradient(circle at top, #ecfff5, #dff4ea); */
+  overflow: hidden;
+    background: linear-gradient(135deg, #2c3e50, #4ca1af);
+}
+
+/* PAUSE ANIMATION ON HOVER */
+.card-image:hover .circle-rotate,
+.card-image:hover .bubble {
+  animation-play-state: paused;
+}
+
+/* ========================= */
+/* ROTATING DASHED CIRCLE */
+/* ========================= */
+.circle-rotate {
+  position: absolute;
+  inset: 14%;
+  border-radius: 50%;
+  border: 2px dashed rgba(32, 180, 121, 0.384);
+  animation: spin 22s linear infinite;
+  z-index: 1;
+  width: 20%;
+  height: 20%;
+}
+.circle-rotate_2 {
+  position: absolute;
+  inset: 5%;
+  left: 50%;
+  top: 6%;
+  border-radius: 50%;
+  border: 2px dashed rgba(32, 180, 121, 0.363);
+  animation: spin_2 22s linear infinite;
+  z-index: 1;
+  width: 10%;
+  height: 10%;
+}
+.circle-rotate_3 {
+  position: absolute;
+  inset: 1%;
+  left: 70%;
+  top: -10%;
+  border-radius: 50%;
+  border: 2px dashed rgba(32, 180, 121, 0.363);
+  animation: spin_2 22s linear infinite;
+  z-index: 1;
+  width: 50%;
+  height: 50%;
+}
+/* hover affect */
+.img-wrapper {
+  position: relative;
+  overflow: hidden;
+}
+
+.img-wrapper img {
+  width: 100%;
+  transition: transform 0.4s ease;
+}
+.img-shadow {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 70%;
+  height: 15px;
+  background: rgba(0, 0, 0, 0.35);
+  filter: blur(12px);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+.glass-reflect {
+  position: absolute;
+  top: -120%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    120deg,
+    transparent 40%,
+    rgba(255, 255, 255, 0.35) 50%,
+    transparent 60%
+  );
+  opacity: 0;
+  transition: all 0.6s ease;
+}
+.product-name {
+  position: absolute;
+  bottom: -40px;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  font-weight: 600;
+  font-size: 1rem;
+  color: #fff;
+  background: linear-gradient(to top, rgba(0,0,0,0.7), transparent);
+  padding: 12px 0;
+  transition: all 0.4s ease;
+}
+.pack-card:hover{
+  box-shadow: 2px 2px 12px 2px rgb(117, 117, 117);
+  transition: all 0.4s;
+}
+.pack-card:hover img {
+  transform: scale(1.05);
+}
+
+.pack-card:hover .img-shadow {
+  opacity: 1;
+ 
+}
+
+.pack-card:hover .glass-reflect {
+  top: -30%;
+  left: 100%;
+  opacity: 1;
+}
+
+.pack-card:hover .product-name {
+  bottom: 0;
+}
+
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+@keyframes spin_2 {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* ========================= */
+/* FLOATING GLOW BUBBLES */
+/* ========================= */
+.bubble {
+  position: absolute;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: radial-gradient(circle, #c6ffe6, #32c48d);
+  box-shadow:
+    0 0 12px rgba(50, 196, 141, 0.6),
+    0 0 24px rgba(50, 196, 141, 0.35);
+  opacity: 0.85;
+  animation: float 7s ease-in-out infinite;
+  z-index: 1;
+}
+
+.bubble-1 {
+  top: 20%;
+  left: 26%;
+  animation-delay: 0s;
+}
+
+.bubble-2 {
+  top: 65%;
+  left: 22%;
+  animation-delay: 1.8s;
+}
+
+.bubble-3 {
+  top: 30%;
+  right: 22%;
+  animation-delay: 3.6s;
+}
+
+.bubble-4 {
+  bottom: 18%;
+  right: 32%;
+  animation-delay: 5.4s;
+}
+
+@keyframes float {
+
+  0%,
+  100% {
+    transform: translateY(0) scale(1);
+  }
+
+  50% {
+    transform: translateY(-22px) scale(1.18);
+  }
+}
+
+/* ========================= */
+/* PRODUCT IMAGE */
+/* ========================= */
+.img-wrapper {
+  position: absolute;
+  inset: 0;
+  z-index: 3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.img-wrapper:hover{
+  cursor: pointer;
+}
+
+.img-wrapper img {
+  width: 80%;
+  height: 80%;
+  object-fit: contain;
+  transition: transform 0.5s ease;
+}
+
+.card-image:hover img {
+  transform: scale(1.08);
+  
+}
+
+/* FLOATING SHADOW */
+/* .img-shadow {
+  position: absolute;
+  bottom: 18%;
+  width: 60%;
+  height: 14px;
+  background: radial-gradient(ellipse,
+      rgba(0, 0, 0, 0.35),
+      transparent 70%);
+  filter: blur(6px);
+} */
+
+/* ========================= */
+/* GLASS REFLECTION */
+/* ========================= */
+/* .glass-reflect {
+  position: absolute;
+  top: 0;
+  left: -80%;
+  width: 60%;
+  height: 100%;
+  background: linear-gradient(45deg,
+      rgba(255, 255, 255, 0.45),
+      rgba(255, 255, 255, 0));
+  transform: skewX(-25deg);
+  animation: shine 6s ease-in-out infinite;
+} */
+
+@keyframes shine {
+  0% {
+    left: -80%;
+  }
+
+  50% {
+    left: 120%;
+  }
+
+  100% {
+    left: 120%;
+  }
+}
+
+/* ========================= */
+/* ENTRY ANIMATION */
+/* ========================= */
+.animate-card {
+  opacity: 0;
+  transform: translateY(30px) scale(0.95);
+  animation: fadeUp 0.8s ease forwards;
+}
+
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* ========================= */
+/* MOBILE */
+/* ========================= */
+@media (max-width: 768px) {
+  .circle-rotate {
+    inset: 20%;
+  }
+
+  .bubble {
+    width: 16px;
+    height: 16px;
+  }
+}
