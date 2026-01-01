@@ -44,16 +44,15 @@ const Sustainability = () => {
 
   return (
     <>
-      <HelmetProvider>
         <Helmet>
+          <meta name="robots" content="index, follow" />
           <title>Sustainability Of Innovation Plastic Cans Ltd.</title>
           <meta name="description" content="Building a greener future through responsible manufacturing and
               innovative eco-friendly solutions." />
           <meta name="keywords" content="Sustainability, Ecofriendly, Biodegradable, Green, Lowcarbon, Reuse, Plastic, Packaging" />
-          <link rel="canonical" href="https://innovation-plastic.com/Sustainability" />
+          <link rel="canonical" href="https://innovation-plastic.com/sustainability" />
         </Helmet>
         {/* <h1>Sustainability</h1> */}
-      </HelmetProvider>
       <div className={darkMode ? "sustain-container dark" : "sustain-container"}>
         <ScrollTop></ScrollTop>
         {/* Dark Mode Toggle */}

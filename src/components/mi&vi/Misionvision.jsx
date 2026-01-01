@@ -1,5 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 import './Misionvision.css';
+import { Helmet } from 'react-helmet-async';
 
 export default function MissionVision() {
   const missionRef = useRef(null);
@@ -35,8 +36,8 @@ export default function MissionVision() {
     <section className="mission-vision-section">
       <h2 className="section-title">Our Mission & Vision</h2>
 
-      <div 
-        ref={missionRef} 
+      <div
+        ref={missionRef}
         className={`mission-box ${missionVisible ? 'fade-in' : ''}`}
       >
         <h3 className=''>Our Mission</h3>
@@ -45,8 +46,8 @@ export default function MissionVision() {
         </p>
       </div>
 
-      <div 
-        ref={visionRef} 
+      <div
+        ref={visionRef}
         className={`vision-box ${visionVisible ? 'fade-in' : ''}`}
       >
         <h3>Our Vision</h3>

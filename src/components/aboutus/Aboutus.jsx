@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import "./Aboutus.css";
 import aboutImage from "../../../public/img/about_us.jpg";
+import { Helmet } from "react-helmet-async";
 
 export default function Aboutus() {
   const textRef = useRef(null);
@@ -31,8 +32,25 @@ export default function Aboutus() {
 
   return (
     <>
-
       <section id="about_us" className="about-us">
+        <Helmet>
+          <meta name="robots" content="index, follow" />
+          <title>
+            About Innovation Plastic Cans Ltd. | Eco-Friendly Plastic Packaging Manufacturer in Bangladesh
+          </title>
+
+          <meta
+            name="description"
+            content="Innovation Plastic Cans Ltd. (IPCL) is a Bangladeshi manufacturer of eco-friendly, food-grade and industrial plastic packaging solutions, established in 2019."
+          />
+
+          {/* Optional – Google ignores it, but safe */}
+          <meta
+            name="keywords"
+            content="plastic packaging manufacturer Bangladesh, eco friendly plastic packaging, food grade plastic containers, industrial plastic packaging, plastic cans manufacturer, sustainable plastic packaging"
+          />
+        </Helmet>
+
         <div className="about-container">
 
           {/* TEXT */}

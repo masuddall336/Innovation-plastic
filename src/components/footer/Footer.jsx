@@ -4,6 +4,8 @@ import logo from "../../../public/logo/IPCL_logo_with_name.png";
 import Call_icon from "../../../public/icon/phone-call.png"
 import facebook_icon from "../../../public/icon/facebook.png"
 import linkdin_icon from "../../../public/icon/linkDin.png"
+import { Helmet } from "react-helmet-async";
+import { Link } from "react-router-dom";
 const Footer = () => {
   const [openMenu, setOpenMenu] = useState({});
 
@@ -192,8 +194,8 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      <div className="footer-copyright">
-        © 2025 Innovation Plastic Cans Ltd. All rights reserved.
+      <div className="footer-copyright flex justify-center flex-wrap items-center ">
+        <p className="">© 2025 Innovation Plastic Cans Ltd. All rights reserved. |</p> <Link to='sitemap' className="text-amber-50 font-bold font-extrabold text-1xl ml-1"> Sitemap</Link>
       </div>
     </div>
 

@@ -56,19 +56,25 @@ export default function gallery() {
 
   return (
     <>
-      <HelmetProvider>
-        <Helmet>
-          <title>Gallery of Industrial Plastic Packaging</title>
-          <meta name="description" content="High-quality plastic packaging products gallery" />
-          <meta name="keywords" content="Plastic Packaging,Plastic Containers,Plastic Bottles,Plastic Jars,Plastic Packaging Manufacturer,Custom Plastic Packaging,Plastic Packaging Factory,Industrial Plastic Packaging" />
-          <link rel="canonical" href="https://innovation-plastic.com/Gallery" />
-        </Helmet>
-      </HelmetProvider>
       <div
         className="gallery"
         onTouchStart={onTouchStart}
         onTouchEnd={onTouchEnd}
       >
+        <Helmet>
+          <meta name="robots" content="index, follow" />
+          <title>Gallery | Industrial & Eco-Friendly Plastic Packaging Products in Bangladesh</title>
+          <meta
+            name="description"
+            content="Explore the gallery of Innovation Plastic Cans Ltd., showcasing high-quality industrial and eco-friendly plastic packaging products, including pails, food boxes, and containers."
+          />
+          <meta
+            name="keywords"
+            content="Plastic packaging gallery, Plastic containers, Industrial plastic packaging, Eco-friendly plastic packaging, Pails, Food boxes, Plastic packaging manufacturer Bangladesh"
+          />
+          <link rel="canonical" href="https://innovation-plastic.com/gallery" />
+
+        </Helmet>
         <ScrollTop></ScrollTop>
         {/* LEFT ARROW → SLIDE LEFT */}
         {/* <button className="arrow_gallery left" onClick={slideLeft}>‹</button> */}
@@ -93,7 +99,7 @@ export default function gallery() {
 
         {/* RIGHT ARROW → SLIDE RIGHT */}
         {/* <button className="arrow_gallery right " onClick={slideRight}>›</button> */}
-        <div className="text-center  pt-25 text-[#fff]">
+        <div className="text-center garrery_trafic   text-[#fff]">
           <p>🚧 Page Under Construction</p>
           <p>We are working hard to bring this page to you. Please check back soon.</p>
         </div>

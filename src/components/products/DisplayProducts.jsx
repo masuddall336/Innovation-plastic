@@ -7,15 +7,14 @@ export default function DisplayProducts({ props }) {
 
   return (
     <>
-      <HelmetProvider>
         <Helmet>
+          <meta name="robots" content="index, follow" />
           <title>High-Quality Plastic Packaging Products | Innovation Plastic Cans Ltd.</title>
           <meta name="description" content="Explore premium plastic packaging products including bottles, containers, jars, and custom packaging solutions. Durable, eco-friendly, and made to perfection." />
           <meta name="keywords" content="plastic packaging, plastic bottles, plastic containers, custom packaging, eco-friendly packaging, durable plastic packaging, packaging solutions" />
 
           <link rel="canonical" href="https://innovation-plastic.com/products" />
         </Helmet>
-      </HelmetProvider>
       <div className="pack-card animate-card">
         <ScrollTop></ScrollTop>
         <div className="card-image">

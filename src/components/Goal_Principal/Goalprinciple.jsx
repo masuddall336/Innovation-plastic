@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import "./Goalprinciple.css";
+import { Helmet } from "react-helmet-async";
 
 const Goalprinciple = () => {
   useEffect(() => {
@@ -13,7 +14,6 @@ const Goalprinciple = () => {
         }
       });
     };
-
     window.addEventListener("scroll", onScroll);
     onScroll();
 

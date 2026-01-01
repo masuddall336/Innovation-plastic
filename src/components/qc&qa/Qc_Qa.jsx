@@ -47,14 +47,13 @@ const Qc_Qa = () => {
 
   return (
     <>
-      <HelmetProvider>
-        <Helmet>
-          <title>Strict QA & QC Standards | Innovative Plastic Packaging Solutions</title>
-          <meta name="description" content="Ensure excellence with our top-tier plastic packaging solutions. Our QA & QC standards guarantee durable, safe, and eco-conscious packaging for every industry." />
-          <meta name="keywords" content="Plastic packaging QA,Plastic packaging QC standards,High-quality plastic packaging manufacturer,Eco-friendly plastic packaging solutions,Durable plastic packaging supplier,Industrial plastic packaging factory,Food-grade plastic packaging QA,Quality control in plastic production,Sustainable plastic packaging factory,Custom plastic packaging with QC approval,Innovative plastic packaging solutions,Certified plastic packaging manufacturer" />
-          <link rel="canonical" href="https://innovation-plastic.com/Qc_Qa" />
-        </Helmet>
-      </HelmetProvider>
+      <Helmet>
+        <meta name="robots" content="index, follow" />
+        <title>Strict QA & QC Standards | Innovative Plastic Packaging Solutions</title>
+        <meta name="description" content="Ensure excellence with our top-tier plastic packaging solutions. Our QA & QC standards guarantee durable, safe, and eco-conscious packaging for every industry." />
+        <meta name="keywords" content="Plastic packaging QA,Plastic packaging QC standards,High-quality plastic packaging manufacturer,Eco-friendly plastic packaging solutions,Durable plastic packaging supplier,Industrial plastic packaging factory,Food-grade plastic packaging QA,Quality control in plastic production,Sustainable plastic packaging factory,Custom plastic packaging with QC approval,Innovative plastic packaging solutions,Certified plastic packaging manufacturer" />
+        <link rel="canonical" href="https://innovation-plastic.com/qc_qa" />
+      </Helmet>
       <div id="qcqa-unique-section">
         <ScrollTop></ScrollTop>
         {/* Carousel */}

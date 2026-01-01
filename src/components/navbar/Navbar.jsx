@@ -11,6 +11,7 @@ import crossIcon from '../../../public/icon/crossicon.jpg'
 
 import { useEffect, useRef, useState } from 'react'
 import { Link, useLocation } from 'react-router-dom'
+import { Helmet } from 'react-helmet-async'
 
 export default function Navbar() {
     const [scrolled, setScrolled] = useState(false)
@@ -104,16 +105,16 @@ export default function Navbar() {
 
                     <ul id='reponsive_ul' className=''>
                         <Link to="/" onClick={closeResponsive}><li>Home</li></Link>
-                        <Link to="/Sustainability" onClick={closeResponsive}><li>Sustainability</li></Link>
+                        <Link to="/sustainability" onClick={closeResponsive}><li>Sustainability</li></Link>
                         <Link to="/products" onClick={closeResponsive}><li>Product</li></Link>
-                        <Link to="/Gallery" onClick={closeResponsive}><li>Gallery</li></Link>
+                        <Link to="/gallery" onClick={closeResponsive}><li>Gallery</li></Link>
                         <a id='about_respon' className='about_a '>
                             <li className="mobile_about  relative" onClick={() => setAboutOpen(!aboutOpen)}>
                                 About
                                 <span className={`arrow ${aboutOpen ? 'down' : ''}`}></span>
                                 <ul className={`mobile_about_ul  ${aboutOpen ? 'open' : ''}`}>
-                                    <Link to="/Qc_Qa" onClick={closeResponsive}><li>QC & QA</li></Link>
-                                    <Link to="/Contact_us" onClick={closeResponsive}><li className=''>Contact Us</li></Link>
+                                    <Link to="/qc_qa" onClick={closeResponsive}><li>QC & QA</li></Link>
+                                    <Link to="/contact_us" onClick={closeResponsive}><li className=''>Contact Us</li></Link>
                                 </ul>
                             </li>
 
@@ -134,16 +135,16 @@ export default function Navbar() {
                 <div ref={menuRef} className="relative main_nav Full_size">
                     <ul className="flex gap-4 items-center nav_main relative">
                         <Link to="/"><li>Home</li></Link>
-                        <Link to="/Sustainability"><li>Sustainability</li></Link>
+                        <Link to="/sustainability"><li>Sustainability</li></Link>
                         <Link to="/products"><li>Product</li></Link>
-                        <Link to="/Gallery"><li>Gallery</li></Link>
+                        <Link to="/gallery"><li>Gallery</li></Link>
 
                         <a className="about" href="#about_us">
                             <li>
                                 About
                                 <ul className="about_ul">
-                                    <Link to="/Qc_Qa"><li>QC & QA</li></Link>
-                                    <Link to="/Contact_us"><li>Contact Us</li></Link>
+                                    <Link to="/qc_qa"><li>QC & QA</li></Link>
+                                    <Link to="/contact_us"><li>Contact Us</li></Link>
                                 </ul>
                             </li>
                         </a>
@@ -154,8 +155,8 @@ export default function Navbar() {
                 {/* SOCIAL ICONS */}
                 <div id="Social_icons" className="flex gap-3 ml-3">
                     <a href="tel:+88-01700-760511"><img className="w-7 bg-white p-1" src={call} alt="" /></a>
-                    <a href="https://www.facebook.com/share/1BRWKkPB49/?mibextid=wwXIfr" target='_blenk'><img className="w-7 bg-white p-1" src={facebook} alt="" /></a>
-                    <a href="#"><img className="w-7 bg-white p-1" src={linkdin} alt="" /></a>
+                    <a href="https://www.facebook.com/share/1BRWKkPB49/?mibextid=wwXIfr" target='_blenk' rel="noopener noreferrer"><img className="w-7 bg-white p-1" src={facebook} alt="" /></a>
+                    <a href="#" target='_blenk' rel="noopener noreferrer"><img className="w-7 bg-white p-1" src={linkdin} alt="" /></a>
                 </div>
 
             </nav>

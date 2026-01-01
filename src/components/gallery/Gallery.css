@@ -103,6 +103,9 @@
   z-index: 10;
   /* box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2); */
 }
+.garrery_trafic{
+padding-top: 10%;
+}
 
 .arrow_gallery.left {
   left: 15px;
@@ -147,5 +150,8 @@
     padding: 0px 3%;
   position: relative;
   padding-top: 35%;
+}
+.garrery_trafic{
+padding-top: 25%;
 }
 }

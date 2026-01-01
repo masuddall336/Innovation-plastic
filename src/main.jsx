@@ -4,13 +4,14 @@ import './index.css'
 import App from './App.jsx'
 import Sustainability from './components/sastainability/Sustainability.jsx'
 import { createBrowserRouter } from 'react-router-dom'
-import { RouterProvider } from 'react-router'
+import { RouterProvider } from 'react-router-dom'
 import Root from './Root.jsx'
 import Contactus from './components/contactus/Contactus.jsx'
 import Qc_Qa from './components/qc&qa/Qc_Qa.jsx'
 import Products from './components/products/Products.jsx'
 import Gallery from './components/gallery/Gallery.jsx'
 import { HelmetProvider } from 'react-helmet-async'
+import Sitemap from './components/sitemap/Sitemap.jsx'
 let router = createBrowserRouter([
   {
     path: "",
@@ -21,15 +22,15 @@ let router = createBrowserRouter([
         Component: App
       },
       {
-        path: '/Sustainability',
+        path: '/sustainability',
         Component: Sustainability
       },
       {
-        path: '/Contact_us',
+        path: '/contact_us',
         Component: Contactus
       },
       {
-        path: '/Qc_Qa',
+        path: '/qc_qa',
         Component: Qc_Qa
       },
       {
@@ -37,8 +38,12 @@ let router = createBrowserRouter([
         Component: Products
       },
       {
-        path: '/Gallery',
+        path: '/gallery',
         Component: Gallery
+      },
+      {
+        path: 'sitemap',
+        Component: Sitemap
       }
     ]
   }
