@@ -81,7 +81,7 @@ const Contactus = () => {
             <div className="address-section">
               <div className="floating-icon office-icon"></div>
               <h2 className="sec-title">Head Office</h2>
-              <p className="address-line">Innovation Plastic Cans Ltd.</p>
+              <h1 className="address-line">Innovation Plastic Cans Ltd.</h1>
               <p className="address-line">Sena Kalyan Bhaban (14th Floor)</p>
               <p className="address-line">195 Motijheel C/A, Dhaka-1000, Bangladesh</p>
               <p className="address-line">Phone: +88-02-223382144, +88-02-223382446, +88-01700-760208</p>

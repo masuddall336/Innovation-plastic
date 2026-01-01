@@ -45,9 +45,13 @@ const Carousel = () => {
       {/* Slides */}
       {slides.map((slide, index) => (
         <img
+          width='100%'
+          height='100%'
+          title='Carosel Images Product Of Company and Factory Images is here'
           key={index}
           src={slide.image}
           alt="carousel"
+          loading="lazy"
           className={`slide-image ${index === currentSlide ? "active" : ""}`}
         />
       ))}

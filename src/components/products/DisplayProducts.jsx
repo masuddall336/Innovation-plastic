@@ -7,18 +7,17 @@ export default function DisplayProducts({ props }) {
 
   return (
     <>
-        <Helmet>
-          <meta name="robots" content="index, follow" />
-          <title>High-Quality Plastic Packaging Products | Innovation Plastic Cans Ltd.</title>
-          <meta name="description" content="Explore premium plastic packaging products including bottles, containers, jars, and custom packaging solutions. Durable, eco-friendly, and made to perfection." />
-          <meta name="keywords" content="plastic packaging, plastic bottles, plastic containers, custom packaging, eco-friendly packaging, durable plastic packaging, packaging solutions" />
+      <Helmet>
+        <meta name="robots" content="index, follow" />
+        <title>High-Quality Plastic Packaging Products | Innovation Plastic Cans Ltd.</title>
+        <meta name="description" content="Explore premium plastic packaging products including bottles, containers, jars, and custom packaging solutions. Durable, eco-friendly, and made to perfection." />
+        <meta name="keywords" content="plastic packaging, plastic bottles, plastic containers, custom packaging, eco-friendly packaging, durable plastic packaging, packaging solutions" />
 
-          <link rel="canonical" href="https://innovation-plastic.com/products" />
-        </Helmet>
+        <link rel="canonical" href="https://innovation-plastic.com/products" />
+      </Helmet>
       <div className="pack-card animate-card">
         <ScrollTop></ScrollTop>
         <div className="card-image">
-
           {/* === BACKGROUND EFFECTS === */}
           <div className="circle-rotate  "></div>
           <div className="circle-rotate_2 "></div>
@@ -32,6 +31,9 @@ export default function DisplayProducts({ props }) {
           {/* === PRODUCT IMAGE === */}
           <div className="img-wrapper">
             <img
+              title="Product Image"
+              width='100%'
+              height='100%'
               src={`/Products/${image}`}
               alt={image}
               loading="lazy"

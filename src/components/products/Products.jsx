@@ -15,11 +15,17 @@ const Products = () => {
     }, []);
     return (
         <Suspense fallback={<h1>Loading....</h1>}>
-            <section className="products-section grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-3 ">
-                {
-                    products.map((sigleProducts) => <DisplayProducts key={sigleProducts.id} props={sigleProducts}></DisplayProducts>)
-                }
-            </section>
+            <div>
+
+                <section className="products-section grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-3 ">
+                    <div className="pt-5 col-span-4 pb-5">
+                        <h1 className="text-center text-4xl font-extrabold border-b-1 text-[#fff]  ">Our Innovative Products</h1>
+                    </div>
+                    {
+                        products.map((sigleProducts) => <DisplayProducts key={sigleProducts.id} props={sigleProducts}></DisplayProducts>)
+                    }
+                </section>
+            </div>
         </Suspense>
     );
 };

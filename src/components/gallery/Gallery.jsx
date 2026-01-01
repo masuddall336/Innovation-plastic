@@ -100,7 +100,7 @@ export default function gallery() {
         {/* RIGHT ARROW → SLIDE RIGHT */}
         {/* <button className="arrow_gallery right " onClick={slideRight}>›</button> */}
         <div className="text-center garrery_trafic   text-[#fff]">
-          <p>🚧 Page Under Construction</p>
+          <h1>🚧 Page Under Construction</h1>
           <p>We are working hard to bring this page to you. Please check back soon.</p>
         </div>
       </div>

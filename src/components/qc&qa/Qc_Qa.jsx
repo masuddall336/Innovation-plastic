@@ -60,9 +60,13 @@ const Qc_Qa = () => {
         <div id="qcqa-unique-carousel">
           {slides.map((slide, index) => (
             <img
+              width='100%'
+              height='100%'
+              loading="lazy"
               key={slide.id}
               src={slide.image}
               alt={`Slide ${index + 1}`}
+              title="QC&QA image"
               className={`qcqa-unique-slide ${index === activeSlide ? "active" : ""}`}
             />
           ))}
@@ -70,6 +74,10 @@ const Qc_Qa = () => {
           {/* Video Icon in Center */}
           <div id="qcqa-unique-carousel-video">
             <img
+              width='100%'
+              height='100%'
+              loading="lazy"
+              title="Video Play Button"
               src={videoIcon}
               alt="Play Video"
               className="qcqa-unique-video-icon pulse"
@@ -106,7 +114,7 @@ const Qc_Qa = () => {
         {/* QC/QA Content */}
         <div id="qcqa-unique-content">
           <div className="qcqa-unique-block qcqa-unique-text">
-            <h2 className="qcqa-unique-main-text">QC & QA – Ensuring Top-Quality Plastic Packaging</h2>
+            <h1 className="qcqa-unique-main-text">QC & QA – Ensuring Top-Quality Plastic Packaging</h1>
             <p>
               At <strong>Our Plastic Packaging Factory</strong>, quality is at the heart of
               everything we do. Our QC/QA team ensures safety, durability, and reliability for

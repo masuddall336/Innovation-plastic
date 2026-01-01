@@ -86,21 +86,25 @@ export default function Navbar() {
                 {/* THREE LINE ICON */}
                 <div id="threeline" className="pl-2 relative">
                     <img
+                        width='100%'
+                        height='100%'
+                        title='Three line image for opening navbar'
                         onClick={() => setResponsiveOpen(true)}
                         className="w-8"
                         src={threeline}
                         alt="menu"
+                        loading="lazy"
                     />
                 </div>
 
                 {/* MOBILE MENU */}
                 <div id="responsive" className={responsiveOpen ? 'show' : ''}>
                     <div id="cross_icon" onClick={closeResponsive}>
-                        <img className="w-7" src={crossIcon} alt="close" />
+                        <img width='100%' height='100%' title='Cross icon for closing the nevbar' className="w-7" src={crossIcon} alt="close" loading="lazy" />
                     </div>
 
                     <div id="logo_part">
-                        <img src={logo} alt="logo" />
+                        <img width='100%' height='100%' title='Innovation Plastic Cans ltd. Companys Logo' src={logo} alt="logo" loading="lazy" />
                     </div>
 
                     <ul id='reponsive_ul' className=''>
@@ -126,9 +130,9 @@ export default function Navbar() {
                 {/* LOGO */}
                 <div id="company_logo" className="flex items-center">
                     <Link to="">
-                        <img className="w-36" src={logo} alt="logo" />
+                        <img width='100%' height='100%' title='Innovation Plastic Cans ltd. Companys main navbar Logo' className="w-36" src={logo} alt="logo" loading="lazy" />
                     </Link>
-                    <img className="w-76 name_logo" src={logo_name} alt="name" />
+                    <img width='100%' height='100%' title='Innovation Plastic Cans ltd. Companys Logo with Company name' className="w-76 name_logo" src={logo_name} alt="name" loading="lazy" />
                 </div>
 
                 {/* DESKTOP NAV */}
@@ -154,9 +158,9 @@ export default function Navbar() {
 
                 {/* SOCIAL ICONS */}
                 <div id="Social_icons" className="flex gap-3 ml-3">
-                    <a href="tel:+88-01700-760511"><img className="w-7 bg-white p-1" src={call} alt="" /></a>
-                    <a href="https://www.facebook.com/share/1BRWKkPB49/?mibextid=wwXIfr" target='_blenk' rel="noopener noreferrer"><img className="w-7 bg-white p-1" src={facebook} alt="" /></a>
-                    <a href="#" target='_blenk' rel="noopener noreferrer"><img className="w-7 bg-white p-1" src={linkdin} alt="" /></a>
+                    <a href="tel:+88-01700-760511"><img width='100%' height='100%' title='This icon for Calling to Innovation' className="w-7 bg-white p-1" src={call}  loading="lazy" alt='Call' /></a>
+                    <a href="https://www.facebook.com/share/1BRWKkPB49/?mibextid=wwXIfr" target='_blenk' rel="noopener noreferrer"><img width='100%' height='100%' title='Go to Facebook' className="w-7 bg-white p-1" src={facebook}  loading="lazy" alt='Facebook' /></a>
+                    <a href="#" target='_blenk' rel="noopener noreferrer"><img width='100%' height='100%' title='Go to Linkdin' loading="lazy" className="w-7 bg-white p-1" src={linkdin} alt="Linkdin" /></a>
                 </div>
 
             </nav>

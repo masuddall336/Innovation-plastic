@@ -69,7 +69,7 @@ export default function Aboutus() {
             ref={imgRef}
             className={`about-image ${imgVisible ? "fade-in-image" : ""}`}
           >
-            <img src={aboutImage} alt="About Us" />
+            <img width='100%' height='100%' title='Innovation Plastic Cans ltd. Facoty image' alt="Factory" src={aboutImage} alt="About Us" loading="lazy"/>
           </div>
 
         </div>

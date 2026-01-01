@@ -61,7 +61,7 @@ const Footer = () => {
           <div className="footer-content">
             {/* Logo */}
             <div className="footer-column">
-              <img className="footer-logo" src={logo} alt="Company Logo" />
+              <img width='100%' height='100%' title='Innovation Plastic Cans Logo' className="footer-logo" src={logo} alt="Logo" loading="lazy" />
             </div>
 
             {/* Services */}
@@ -185,9 +185,9 @@ const Footer = () => {
               <div className="social Icons">
                 {/* SOCIAL ICONS */}
                 <div id="Social_icons" className="flex gap-3 ml-[30%] md:ml-0">
-                  <a href="tel:+88-01700-760511"><img className="w-7 bg-white p-1" src={Call_icon} alt="" /></a>
-                  <a href="https://www.facebook.com/share/1BRWKkPB49/?mibextid=wwXIfr" target='_blenk'><img className="w-7 bg-white p-1" src={facebook_icon} alt="" /></a>
-                  <a href="#"><img className="w-7 bg-white p-1" src={linkdin_icon} alt="" /></a>
+                  <a href="tel:+88-01700-760511"><img width='100%' height='100%' title='For Call to Innovation' className="w-7 bg-white p-1" src={Call_icon} alt="Call" loading="lazy" /></a>
+                  <a href="https://www.facebook.com/share/1BRWKkPB49/?mibextid=wwXIfr" target='_blenk'><img className="w-7 bg-white p-1" src={facebook_icon} alt="Facebook" width='100%' height='100%' title='Go to Facebook' loading="lazy"/></a>
+                  <a href="#"><img className="w-7 bg-white p-1" src={linkdin_icon} alt="Linkdin" loading="lazy" width='100%' height='100%' title='Go to Linkdin' /></a>
                 </div>
               </div>
             </div>
