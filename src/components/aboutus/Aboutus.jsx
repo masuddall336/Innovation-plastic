@@ -33,7 +33,7 @@ export default function Aboutus() {
   return (
     <>
       <section id="about_us" className="about-us">
-        <Helmet>
+        {/* <Helmet>
           <meta name="robots" content="index, follow" />
           <title>
             About Innovation Plastic Cans Ltd. | Eco-Friendly Plastic Packaging Manufacturer in Bangladesh
@@ -43,13 +43,11 @@ export default function Aboutus() {
             name="description"
             content="Innovation Plastic Cans Ltd. (IPCL) is a Bangladeshi manufacturer of eco-friendly, food-grade and industrial plastic packaging solutions, established in 2019."
           />
-
-          {/* Optional – Google ignores it, but safe */}
           <meta
             name="keywords"
             content="plastic packaging manufacturer Bangladesh, eco friendly plastic packaging, food grade plastic containers, industrial plastic packaging, plastic cans manufacturer, sustainable plastic packaging"
           />
-        </Helmet>
+        </Helmet> */}
 
         <div className="about-container">
 
@@ -69,7 +67,7 @@ export default function Aboutus() {
             ref={imgRef}
             className={`about-image ${imgVisible ? "fade-in-image" : ""}`}
           >
-            <img width='100%' height='100%' title='Innovation Plastic Cans ltd. Facoty image' alt="Factory" src={aboutImage} alt="About Us" loading="lazy"/>
+            <img width='100%' height='100%' title='Innovation Plastic Cans ltd. Facoty image' alt="Factory_img" src={aboutImage}  loading="lazy"/>
           </div>
 
         </div>

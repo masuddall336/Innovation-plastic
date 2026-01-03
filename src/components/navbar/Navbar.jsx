@@ -70,6 +70,8 @@ export default function Navbar() {
         return () => window.removeEventListener('scroll', handleScroll)
     }, [])
 
+    
+
     return (
         <div>
             {/* Overlay */}
@@ -129,7 +131,7 @@ export default function Navbar() {
 
                 {/* LOGO */}
                 <div id="company_logo" className="flex items-center">
-                    <Link to="">
+                    <Link to="/">
                         <img width='100%' height='100%' title='Innovation Plastic Cans ltd. Companys main navbar Logo' className="w-36" src={logo} alt="logo" loading="lazy" />
                     </Link>
                     <img width='100%' height='100%' title='Innovation Plastic Cans ltd. Companys Logo with Company name' className="w-76 name_logo" src={logo_name} alt="name" loading="lazy" />
@@ -158,8 +160,8 @@ export default function Navbar() {
 
                 {/* SOCIAL ICONS */}
                 <div id="Social_icons" className="flex gap-3 ml-3">
-                    <a href="tel:+88-01700-760511"><img width='100%' height='100%' title='This icon for Calling to Innovation' className="w-7 bg-white p-1" src={call}  loading="lazy" alt='Call' /></a>
-                    <a href="https://www.facebook.com/share/1BRWKkPB49/?mibextid=wwXIfr" target='_blenk' rel="noopener noreferrer"><img width='100%' height='100%' title='Go to Facebook' className="w-7 bg-white p-1" src={facebook}  loading="lazy" alt='Facebook' /></a>
+                    <a href="tel:+88-01700-760511"><img width='100%' height='100%' title='This icon for Calling to Innovation' className="w-7 bg-white p-1" src={call} loading="lazy" alt='Call' /></a>
+                    <a href="https://www.facebook.com/share/1BRWKkPB49/?mibextid=wwXIfr" target='_blenk' rel="noopener noreferrer"><img width='100%' height='100%' title='Go to Facebook' className="w-7 bg-white p-1" src={facebook} loading="lazy" alt='Facebook' /></a>
                     <a href="#" target='_blenk' rel="noopener noreferrer"><img width='100%' height='100%' title='Go to Linkdin' loading="lazy" className="w-7 bg-white p-1" src={linkdin} alt="Linkdin" /></a>
                 </div>
 

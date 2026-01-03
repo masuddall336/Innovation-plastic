@@ -12,22 +12,22 @@ function App() {
 
   return (
     <>
-        <Helmet>  
-          <meta name="robots" content="index, follow" />
-          <title>Innovation Plastic Cans Ltd. | Home</title>
-          <meta name="description" content="High-quality plastic packaging solutions for businesses." />
-          <meta name="keywords" content="Plastic, Packaging, Bottles, Factory, Containers, Pail, Lid, inner" />
-          <link rel="canonical" href="https://www.innovation-plastic.com/" />
-        </Helmet>
-        <div>
-          <ScrollTop></ScrollTop>
-          <Navbar></Navbar>
-          <Carousel></Carousel>
-          <Aboutus></Aboutus>
-          <MissionVision></MissionVision>
-          <Goalprinciple></Goalprinciple>
-        </div>
-      
+      <Helmet>
+        <meta name="robots" content="index, follow" />
+        <title>Home | Innovation Plastic Cans Ltd.</title>
+        <meta name="description" content="High-quality plastic packaging solutions for businesses." />
+        <meta name="keywords" content="Plastic, Packaging, Bottles, Factory, Containers, Pail, Lid, inner" />
+        <link rel="canonical" href="https://www.innovation-plastic.com/" />
+      </Helmet>
+      <div>
+        <ScrollTop></ScrollTop>
+        <Navbar></Navbar>
+        <Carousel></Carousel>
+        <Aboutus></Aboutus>
+        <MissionVision></MissionVision>
+        <Goalprinciple></Goalprinciple>
+      </div>
+
     </>
 
   )
