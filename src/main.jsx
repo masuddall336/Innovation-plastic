@@ -12,6 +12,8 @@ import Products from './components/products/Products.jsx'
 import Gallery from './components/gallery/Gallery.jsx'
 import { HelmetProvider } from 'react-helmet-async'
 import Sitemap from './components/sitemap/Sitemap.jsx'
+import Login from './login/Login.jsx'
+import AuthProvider from './firebase/AuthProvider.jsx'
 let router = createBrowserRouter([
   {
     path: "",
@@ -26,11 +28,11 @@ let router = createBrowserRouter([
         Component: Sustainability
       },
       {
-        path: '/contact_us',
+        path: '/contact-us',
         Component: Contactus
       },
       {
-        path: '/qc_qa',
+        path: '/qc-qa',
         Component: Qc_Qa
       },
       {
@@ -44,13 +46,19 @@ let router = createBrowserRouter([
       {
         path: 'sitemap',
         Component: Sitemap
+      },
+      {
+        path: '/login',
+        Component: Login
       }
     ]
   }
 ])
 createRoot(document.getElementById('root')).render(
   <HelmetProvider>
-    <RouterProvider router={router}>
-    </RouterProvider>
+    <AuthProvider>
+      <RouterProvider router={router}>
+      </RouterProvider>
+    </AuthProvider>
   </HelmetProvider>
 )

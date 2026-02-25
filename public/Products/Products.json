@@ -7,7 +7,7 @@
     "description": "High-quality plastic bottles for beverages, chemicals, and personal care products.",
     "material": "PET / HDPE",
     "capacity": "50ml – 5L",
-    "image": "Fresher_Food_Box_4_pcs.png"
+    "image": "/Fresher_Food_Box_4_pcs.png"
   },
   {
     "id": 2,
@@ -25,7 +25,7 @@
     "description": "Flexible plastic films for industrial, food, and commercial packaging.",
     "material": "LDPE / LLDPE",
     "thickness": "20 – 200 microns",
-    "image": "Lubricant_Can_green_5Ltr.png"
+    "image": "/Lubricant_Can_green_5Ltr.png"
   },
   {
     "id": 4,
@@ -43,7 +43,7 @@
     "description": "Heavy-duty plastic drums for safe transportation and storage.",
     "material": "HDPE",
     "capacity": "50L – 220L",
-    "image": "Lubricants_Yellow_1Ltr.png"
+    "image": "/Lubricants_Yellow_1Ltr.png"
   },
   {
     "id": 6,
@@ -52,7 +52,7 @@
     "description": "Heavy-duty plastic drums for safe transportation and storage.",
     "material": "HDPE",
     "capacity": "50L – 220L",
-    "image": "Lunbiracant_Blue_5Ltr.png"
+    "image": "/Lunbiracant_Blue_5Ltr.png"
   },
   {
     "id": 7,
@@ -61,7 +61,7 @@
     "description": "Heavy-duty plastic drums for safe transportation and storage.",
     "material": "HDPE",
     "capacity": "50L – 220L",
-    "image": "one_ltr_deep_orange.png"
+    "image": "/one_ltr_deep_orange.png"
   },
   {
     "id": 8,
@@ -79,7 +79,7 @@
     "description": "Heavy-duty plastic drums for safe transportation and storage.",
     "material": "HDPE",
     "capacity": "50L – 220L",
-    "image": "one_ltr_silver.png"
+    "image": "/one_ltr_silver.png"
   },
   {
     "id": 10,
@@ -88,7 +88,7 @@
     "description": "Heavy-duty plastic drums for safe transportation and storage.",
     "material": "HDPE",
     "capacity": "50L – 220L",
-    "image": "one_ltr_yellow.png"
+    "image": "/one_ltr_yellow.png"
   },
   {
     "id": 11,
@@ -97,7 +97,7 @@
     "description": "Heavy-duty plastic drums for safe transportation and storage.",
     "material": "HDPE",
     "capacity": "50L – 220L",
-    "image": "pail_20Ltr.png"
+    "image": "/pail_20Ltr.png"
   },
   {
     "id": 12,
@@ -106,7 +106,7 @@
     "description": "Heavy-duty plastic drums for safe transportation and storage.",
     "material": "HDPE",
     "capacity": "50L – 220L",
-    "image": "Square_Tiffin_Box-.png"
+    "image": "/Square_Tiffin_Box-.png"
   },
   {
     "id": 13,
@@ -115,7 +115,7 @@
     "description": "Heavy-duty plastic drums for safe transportation and storage.",
     "material": "HDPE",
     "capacity": "50L – 220L",
-    "image": "Thener_Can.png"
+    "image": "/Thener_Can.png"
   },
   {
     "id": 14,
@@ -124,6 +124,6 @@
     "description": "Heavy-duty plastic drums for safe transportation and storage.",
     "material": "HDPE",
     "capacity": "50L – 220L",
-    "image": "Tiffin_Time_Box.png"
+    "image": "/Tiffin_Time_Box.png"
   }
 ]

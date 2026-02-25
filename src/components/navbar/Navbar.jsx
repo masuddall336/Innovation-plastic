@@ -119,8 +119,8 @@ export default function Navbar() {
                                 About
                                 <span className={`arrow ${aboutOpen ? 'down' : ''}`}></span>
                                 <ul className={`mobile_about_ul  ${aboutOpen ? 'open' : ''}`}>
-                                    <Link to="/qc_qa" onClick={closeResponsive}><li>QC & QA</li></Link>
-                                    <Link to="/contact_us" onClick={closeResponsive}><li className=''>Contact Us</li></Link>
+                                    <Link to="/qc-qa" onClick={closeResponsive}><li>QC & QA</li></Link>
+                                    <Link to="/contact-us" onClick={closeResponsive}><li className=''>Contact Us</li></Link>
                                 </ul>
                             </li>
 
@@ -149,8 +149,8 @@ export default function Navbar() {
                             <li>
                                 About
                                 <ul className="about_ul">
-                                    <Link to="/qc_qa"><li>QC & QA</li></Link>
-                                    <Link to="/contact_us"><li>Contact Us</li></Link>
+                                    <Link to="/qc-qa"><li>QC & QA</li></Link>
+                                    <Link to="/contact-us"><li>Contact Us</li></Link>
                                 </ul>
                             </li>
                         </a>

@@ -4,7 +4,6 @@ import DisplayProducts from "./DisplayProducts";
 
 const Products = () => {
     const [products, setProducts] = useState([]);
-    const cardsRef = useRef([]);
 
     // Fetch REST API
     useEffect(() => {
