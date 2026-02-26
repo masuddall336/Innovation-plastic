@@ -9,11 +9,12 @@ import linkdin from '../../../public/icon/linkDin.png'
 import threeline from '../../../public/icon/threeLine.png'
 import crossIcon from '../../../public/icon/crossicon.jpg'
 
-import { useEffect, useRef, useState } from 'react'
+import { useContext, useEffect, useRef, useState } from 'react'
 import { Link, useLocation } from 'react-router-dom'
-import { Helmet } from 'react-helmet-async'
+import { AuthContext } from '../../firebase/AuthContext'
 
 export default function Navbar() {
+    const { user, singOutUser } = useContext(AuthContext);
     const [scrolled, setScrolled] = useState(false)
     const [aboutOpen, setAboutOpen] = useState(false)
     const [responsiveOpen, setResponsiveOpen] = useState(false)
@@ -70,7 +71,7 @@ export default function Navbar() {
         return () => window.removeEventListener('scroll', handleScroll)
     }, [])
 
-    
+
 
     return (
         <div>
@@ -157,9 +158,13 @@ export default function Navbar() {
                     </ul>
                     <span ref={hoverDiv} id="hover_div"></span>
                 </div>
-
                 {/* SOCIAL ICONS */}
                 <div id="Social_icons" className="flex gap-3 ml-3">
+                    <div>
+                        {
+                            user ? <button className='bg-[#fff] py-1 px-2 rounded font-bold text-[#805555] cursor-pointer' onClick={singOutUser}>Sign Out</button> : <></>
+                        }
+                    </div>
                     <a href="tel:+88-01700-760511"><img width='100%' height='100%' title='This icon for Calling to Innovation' className="w-7 bg-white p-1" src={call} loading="lazy" alt='Call' /></a>
                     <a href="https://www.facebook.com/share/1BRWKkPB49/?mibextid=wwXIfr" target='_blenk' rel="noopener noreferrer"><img width='100%' height='100%' title='Go to Facebook' className="w-7 bg-white p-1" src={facebook} loading="lazy" alt='Facebook' /></a>
                     <a href="#" target='_blenk' rel="noopener noreferrer"><img width='100%' height='100%' title='Go to Linkdin' loading="lazy" className="w-7 bg-white p-1" src={linkdin} alt="Linkdin" /></a>

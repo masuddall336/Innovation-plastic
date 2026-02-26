@@ -1,9 +1,13 @@
-import { Helmet, HelmetProvider } from "react-helmet-async";
+import { Helmet } from "react-helmet-async";
 import ScrollTop from "../ScrollTop";
 import "./DisplayProducts.css";
+import { NavLink } from "react-router-dom";
+import { useContext } from "react";
+import { AuthContext } from "../../firebase/AuthContext";
 
 export default function DisplayProducts({ props }) {
-  const { image, name } = props;
+  const { user } = useContext(AuthContext)
+  const { image, name, description } = props;
 
   return (
     <>
@@ -45,7 +49,15 @@ export default function DisplayProducts({ props }) {
 
             {/* Product Name */}
             <div className="product-name">
-              {name}
+              <h2 className="text-2xl text-[#00A651] font-bold text-shadow-xs text-shadow-amber-50"> {name}</h2>
+              <p>{description}</p>
+              <div className="flex gap-2 justify-end pr-2 pt-2">
+                <NavLink className='bg-[#00A651] py-1 px-2 rounded-xs self-end-safe'>Quick View</NavLink>
+                {
+                  user ? <> <NavLink className='bg-[#00A651] py-1 px-2 rounded-xs self-end-safe'>Edit</NavLink>
+                    <NavLink className='bg-[#00A651] py-1 px-2 rounded-xs self-end-safe'>Delet</NavLink> </> : <></>
+                }
+              </div>
             </div>
           </div>
         </div>

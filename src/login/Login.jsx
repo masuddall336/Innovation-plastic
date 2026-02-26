@@ -5,9 +5,15 @@ import { useContext } from "react";
 import { AuthContext } from "../firebase/AuthContext";
 
 const Login = () => {
-    const {singInUser, user} = useContext(AuthContext);
-    console.log(user);
-    
+    const { singInUser, user } = useContext(AuthContext);
+    console.log("user inside login", user?.email);
+    if (user ?.email) {
+        console.log("user Available");
+    } else {
+        console.log("user not available");
+
+    }
+
     const handleLogin = e => {
         e.preventDefault();
         const form = e.target;
@@ -17,13 +23,13 @@ const Login = () => {
 
         // send data to firebase Auth
         singInUser(email, password)
-        .then(ras=>{
-            console.log(ras);
-        })
-        .catch(error=>{
-            console.log(error);
-            
-        })
+            .then(ras => {
+                console.log(ras);
+            })
+            .catch(error => {
+                console.log(error);
+
+            })
 
     }
     return (

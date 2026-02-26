@@ -17,7 +17,7 @@
   aspect-ratio: 1 / 1;
   /* background: radial-gradient(circle at top, #ecfff5, #dff4ea); */
   overflow: hidden;
-    background: linear-gradient(135deg, #2c3e50, #4ca1af);
+  background: linear-gradient(135deg, #2c3e50, #4ca1af);
 }
 
 /* PAUSE ANIMATION ON HOVER */
@@ -39,6 +39,7 @@
   width: 20%;
   height: 20%;
 }
+
 .circle-rotate_2 {
   position: absolute;
   inset: 5%;
@@ -51,6 +52,7 @@
   width: 10%;
   height: 10%;
 }
+
 .circle-rotate_3 {
   position: absolute;
   inset: 1%;
@@ -63,6 +65,7 @@
   width: 50%;
   height: 50%;
 }
+
 /* hover affect */
 .img-wrapper {
   position: relative;
@@ -73,6 +76,7 @@
   width: 100%;
   transition: transform 0.4s ease;
 }
+
 .img-shadow {
   position: absolute;
   bottom: 10px;
@@ -85,45 +89,46 @@
   opacity: 0;
   transition: opacity 0.4s ease;
 }
+
 .glass-reflect {
   position: absolute;
   top: -120%;
   left: -50%;
   width: 200%;
   height: 200%;
-  background: linear-gradient(
-    120deg,
-    transparent 40%,
-    rgba(255, 255, 255, 0.35) 50%,
-    transparent 60%
-  );
+  background: linear-gradient(120deg,
+      transparent 40%,
+      rgba(255, 255, 255, 0.35) 50%,
+      transparent 60%);
   opacity: 0;
   transition: all 0.6s ease;
 }
+
 .product-name {
   position: absolute;
-  bottom: -40px;
+  bottom: -200px;
   left: 0;
   width: 100%;
-  text-align: center;
-  font-weight: 600;
-  font-size: 1rem;
+  text-align: left;
   color: #fff;
-  background: linear-gradient(to top, rgba(0,0,0,0.7), transparent);
-  padding: 12px 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent);
+  padding-bottom: 12px;
+  padding-left: 10px;
   transition: all 0.4s ease;
 }
-.pack-card:hover{
+
+.pack-card:hover {
   box-shadow: 2px 2px 12px 2px rgb(117, 117, 117);
   transition: all 0.4s;
 }
+
 .pack-card:hover img {
   transform: scale(1.05);
 }
 
 .pack-card:hover .img-shadow {
   opacity: 1;
- 
+
 }
 
 .pack-card:hover .glass-reflect {
@@ -142,6 +147,7 @@
     transform: rotate(360deg);
   }
 }
+
 @keyframes spin_2 {
   to {
     transform: rotate(360deg);
@@ -212,7 +218,8 @@
   align-items: center;
   justify-content: center;
 }
-.img-wrapper:hover{
+
+.img-wrapper:hover {
   cursor: pointer;
 }
 
@@ -225,7 +232,7 @@
 
 .card-image:hover img {
   transform: scale(1.08);
-  
+
 }
 
 /* FLOATING SHADOW */

@@ -4,7 +4,6 @@ import logo from "../../../public/logo/IPCL_logo_with_name.png";
 import Call_icon from "../../../public/icon/phone-call.png"
 import facebook_icon from "../../../public/icon/facebook.png"
 import linkdin_icon from "../../../public/icon/linkDin.png"
-import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 const Footer = () => {
   const [openMenu, setOpenMenu] = useState({});
@@ -150,11 +149,6 @@ const Footer = () => {
                       className={`footer-li-arrow ${openMenu["products"] ? "active" : ""}`}
                     ></span>
                   </div>
-                  <ul className={`footer-submenu ${openMenu["products"] ? "open" : ""}`}>
-                    <li><a href="#">Food Containers</a></li>
-                    <li><a href="#">Bottles</a></li>
-                    <li><a href="#">Industrial Cans</a></li>
-                  </ul>
                 </li>
 
                 <li>

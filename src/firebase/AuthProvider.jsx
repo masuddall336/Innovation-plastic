@@ -1,6 +1,6 @@
 
 import { AuthContext } from './AuthContext'
-import { onAuthStateChanged, signInWithEmailAndPassword } from 'firebase/auth';
+import { onAuthStateChanged, signInWithEmailAndPassword, signOut } from 'firebase/auth';
 import { auth } from './firebase.init';
 import { useEffect, useState } from 'react';
 
@@ -20,9 +20,16 @@ const AuthProvider = ({ children }) => {
     const singInUser = (email, password) => {
         return signInWithEmailAndPassword(auth, email, password)
     }
+    const singOutUser = () => {
+        return signOut(auth)
+            .then(ras => {
+                console.log(ras);
+            })
+    }
     const userInfo = {
         user,
-        singInUser
+        singInUser,
+        singOutUser
     }
     return (
         <AuthContext.Provider value={userInfo}>
