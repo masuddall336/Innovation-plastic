@@ -38,6 +38,7 @@ let router = createBrowserRouter([
       },
       {
         path: '/products',
+        loader: () => fetch('http://localhost:3000/products').then(res => res.json()),
         Component: Products
       },
       {

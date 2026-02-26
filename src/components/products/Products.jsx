@@ -1,10 +1,13 @@
 import React, { Suspense, useContext, useEffect, useRef, useState } from "react";
 import "./Products.css";
 import DisplayProducts from "./DisplayProducts";
-import { NavLink } from "react-router-dom";
+import { NavLink, useLoaderData } from "react-router-dom";
 import { AuthContext } from "../../firebase/AuthContext";
 
 const Products = () => {
+    const allProducts = useLoaderData()
+    console.log("data comes from db", allProducts);
+
     const [products, setProducts] = useState([]);
     const { user } = useContext(AuthContext)
 
