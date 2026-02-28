@@ -7,28 +7,21 @@ import { AuthContext } from "../../firebase/AuthContext";
 const Products = () => {
     const allProducts = useLoaderData()
     console.log("data comes from db", allProducts);
-
-    const [products, setProducts] = useState([]);
     const { user } = useContext(AuthContext)
 
-    // Fetch REST API
-    useEffect(() => {
-        fetch("/Products/Products.json")
-            .then((res) => res.json())
-            .then((data) => setProducts(data))
-            .catch((err) => console.error("API Error:", err));
-    }, []);
+
     return (
-        <Suspense fallback={<h1>Loading....</h1>}>
             <div className="">
 
                 <section className="products-section grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-3 ">
                     <div className="pt-5 col-span-4 pb-5">
                         {/* <h1 className="text-center text-4xl font-extrabold border-b-1 text-[#fff]  "></h1> */}
                     </div>
-                    {
-                        products.map((sigleProducts) => <DisplayProducts key={sigleProducts.id} props={sigleProducts}></DisplayProducts>)
+                    <Suspense fallback={<p>Loading...</p>}>
+                        {
+                        allProducts.map((product, index)=> <DisplayProducts key={index} props={product}></DisplayProducts>)
                     }
+                    </Suspense>
                 </section>
                 {
                     user ? <><div className="my-3 flex justify-center-safe">
@@ -37,7 +30,6 @@ const Products = () => {
                 }
 
             </div>
-        </Suspense>
     );
 };
 

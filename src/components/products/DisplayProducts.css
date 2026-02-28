@@ -5,7 +5,10 @@
   width: 100%;
   border-radius: 16px;
   overflow: hidden;
-  /* box-shadow: 0 18px 45px rgba(0, 0, 0, 0.18); */
+  background: #fff;
+  /* default transform for smooth scaling */
+  transform: scale(1);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
 }
 
 /* ========================= */
@@ -15,7 +18,6 @@
   position: relative;
   width: 100%;
   aspect-ratio: 1 / 1;
-  /* background: radial-gradient(circle at top, #ecfff5, #dff4ea); */
   overflow: hidden;
   background: linear-gradient(135deg, #2c3e50, #4ca1af);
 }
@@ -27,7 +29,7 @@
 }
 
 /* ========================= */
-/* ROTATING DASHED CIRCLE */
+/* ROTATING DASHED CIRCLES */
 /* ========================= */
 .circle-rotate {
   position: absolute;
@@ -66,94 +68,6 @@
   height: 50%;
 }
 
-/* hover affect */
-.img-wrapper {
-  position: relative;
-  overflow: hidden;
-}
-
-.img-wrapper img {
-  width: 100%;
-  transition: transform 0.4s ease;
-}
-
-.img-shadow {
-  position: absolute;
-  bottom: 10px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 70%;
-  height: 15px;
-  background: rgba(0, 0, 0, 0.35);
-  filter: blur(12px);
-  opacity: 0;
-  transition: opacity 0.4s ease;
-}
-
-.glass-reflect {
-  position: absolute;
-  top: -120%;
-  left: -50%;
-  width: 200%;
-  height: 200%;
-  background: linear-gradient(120deg,
-      transparent 40%,
-      rgba(255, 255, 255, 0.35) 50%,
-      transparent 60%);
-  opacity: 0;
-  transition: all 0.6s ease;
-}
-
-.product-name {
-  position: absolute;
-  bottom: -200px;
-  left: 0;
-  width: 100%;
-  text-align: left;
-  color: #fff;
-  background: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent);
-  padding-bottom: 12px;
-  padding-left: 10px;
-  transition: all 0.4s ease;
-}
-
-.pack-card:hover {
-  box-shadow: 2px 2px 12px 2px rgb(117, 117, 117);
-  transition: all 0.4s;
-}
-
-.pack-card:hover img {
-  transform: scale(1.05);
-}
-
-.pack-card:hover .img-shadow {
-  opacity: 1;
-
-}
-
-.pack-card:hover .glass-reflect {
-  top: -30%;
-  left: 100%;
-  opacity: 1;
-}
-
-.pack-card:hover .product-name {
-  bottom: 0;
-}
-
-
-@keyframes spin {
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-@keyframes spin_2 {
-  to {
-    transform: rotate(360deg);
-  }
-}
-
 /* ========================= */
 /* FLOATING GLOW BUBBLES */
 /* ========================= */
@@ -163,8 +77,7 @@
   height: 22px;
   border-radius: 50%;
   background: radial-gradient(circle, #c6ffe6, #32c48d);
-  box-shadow:
-    0 0 12px rgba(50, 196, 141, 0.6),
+  box-shadow: 0 0 12px rgba(50, 196, 141, 0.6),
     0 0 24px rgba(50, 196, 141, 0.35);
   opacity: 0.85;
   animation: float 7s ease-in-out infinite;
@@ -208,7 +121,7 @@
 }
 
 /* ========================= */
-/* PRODUCT IMAGE */
+/* PRODUCT IMAGE WRAPPER */
 /* ========================= */
 .img-wrapper {
   position: absolute;
@@ -219,67 +132,91 @@
   justify-content: center;
 }
 
-.img-wrapper:hover {
-  cursor: pointer;
-}
-
 .img-wrapper img {
-  width: 80%;
-  height: 80%;
+  
   object-fit: contain;
   transition: transform 0.5s ease;
 }
 
-.card-image:hover img {
-  transform: scale(1.08);
-
+.card-image:hover .img-wrapper img {
+  
 }
 
-/* FLOATING SHADOW */
-/* .img-shadow {
+/* SHADOW AND GLASS REFLECTION */
+.img-shadow {
   position: absolute;
-  bottom: 18%;
-  width: 60%;
-  height: 14px;
-  background: radial-gradient(ellipse,
-      rgba(0, 0, 0, 0.35),
-      transparent 70%);
-  filter: blur(6px);
-} */
+  /* bottom: 10px; */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 70%;
+  height: 15px;
+  /* background: rgba(0, 0, 0, 0.35); */
+  /* filter: blur(12px); */
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.card-image:hover .img-shadow {
+  /* opacity: 1; */
+}
+
+.glass-reflect {
+  position: absolute;
+  top: -120%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(120deg,
+      transparent 40%,
+      rgba(255, 255, 255, 0.35) 50%,
+      transparent 60%);
+  opacity: 0;
+  transition: all 0.6s ease;
+}
+
+.card-image:hover .glass-reflect {
+  top: -30%;
+  left: 100%;
+  opacity: 1;
+}
 
 /* ========================= */
-/* GLASS REFLECTION */
+/* PRODUCT TITLE OVERLAY */
 /* ========================= */
-/* .glass-reflect {
-  position: absolute;
-  top: 0;
-  left: -80%;
-  width: 60%;
-  height: 100%;
-  background: linear-gradient(45deg,
-      rgba(255, 255, 255, 0.45),
-      rgba(255, 255, 255, 0));
-  transform: skewX(-25deg);
-  animation: shine 6s ease-in-out infinite;
-} */
 
-@keyframes shine {
-  0% {
-    left: -80%;
+.pack-card:hover .product-name {
+  /* bottom: 0; */
+}
+
+/* ========================= */
+/* CENTERED VIEW BUTTON */
+/* ========================= */
+.view-btn {
+  pointer-events: none;
+  /* only on hover */
+}
+
+.img-wrapper:hover .view-btn {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* ========================= */
+/* ROTATION ANIMATION */
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
   }
+}
 
-  50% {
-    left: 120%;
-  }
-
-  100% {
-    left: 120%;
+@keyframes spin_2 {
+  to {
+    transform: rotate(360deg);
   }
 }
 
 /* ========================= */
 /* ENTRY ANIMATION */
-/* ========================= */
 .animate-card {
   opacity: 0;
   transform: translateY(30px) scale(0.95);
@@ -294,8 +231,14 @@
 }
 
 /* ========================= */
-/* MOBILE */
+/* HOVER SHADOW */
+.pack-card:hover {
+  box-shadow: 2px 2px 12px 2px rgb(117, 117, 117);
+  transform: scale(1.05); /* scale slightly up on hover */
+}
+
 /* ========================= */
+/* RESPONSIVE */
 @media (max-width: 768px) {
   .circle-rotate {
     inset: 20%;
