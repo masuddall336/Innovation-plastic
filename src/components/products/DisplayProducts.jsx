@@ -56,14 +56,14 @@ export default function DisplayProducts({ props }) {
         </div>
 
         {/* DETAILS */}
-        <div className="p-4 space-y-2 bg-white">
+        <div className=" pl-1 space-y-2 bg-white">
           <h4 className=" text-[#3b4042] font-extrabold text-xl">{name}</h4>
           {/* <p className="text-sm text-gray-500">Category: {category}</p>
           <p className="text-sm text-gray-500">Capacity: {capacity}</p>
           <p className="text-sm text-gray-500">Material: {material}</p> */}
           <p className="text-md font-bold text-[#7e7e7e] text-shadow-2xs">{description}</p>
 
-          <div className="flex justify-between pt-3">
+          <div className="flex justify-between">
             {
               user ? <><button className="border px-3 py-1 rounded flex items-center gap-2 hover:bg-gray-100">
                 <FaEdit /> Edit
