@@ -3,9 +3,9 @@ import "./Carosel.css";
 
 // Images
 import slide1Img from "../../../public/img/Slide_4.jpg";
-import slide3Img from "../../../public/img/Slide_3.jpg";
-import slide2Img from "../../../public/img/Slide_2.jpg";
-import slide4Img from "../../../public/img/Slide_1.jpg";
+import slide3Img from "../../../public/img/Slide_3.png";
+import slide2Img from "../../../public/img/Slide_2.png";
+import slide4Img from "../../../public/img/Slide_1.png";
 import { Helmet } from "react-helmet-async";
 
 const slides = [
