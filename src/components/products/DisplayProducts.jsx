@@ -56,7 +56,7 @@ export default function DisplayProducts({ props }) {
         </div>
 
         {/* DETAILS */}
-        <div className=" pl-1 space-y-2 bg-white">
+        <div className=" pl-1 space-y-1 bg-white">
           <h4 className=" text-[#3b4042] font-extrabold text-xl">{name}</h4>
           {/* <p className="text-sm text-gray-500">Category: {category}</p>
           <p className="text-sm text-gray-500">Capacity: {capacity}</p>
